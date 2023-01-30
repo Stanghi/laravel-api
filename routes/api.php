@@ -24,4 +24,5 @@ Route::namespace('Api')
     ->group(function () {
         Route::get('/', [ProjectController::class, 'index']);
         Route::get('/{slug}', [ProjectController::class, 'show']);
+        Route::post('/search', [ProjectController::class, 'search']);
     });
