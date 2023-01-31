@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,5 @@ Route::namespace('Api')
         Route::get('/getByTechnologies/{id}', [ProjectController::class, 'getByTechnologies']);
         Route::post('/search', [ProjectController::class, 'search']);
     });
+
+Route::post('/contacts', [LeadController::class, 'store']);
